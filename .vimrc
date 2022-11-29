@@ -1,5 +1,3 @@
-set shell=/bin/bash
-
 set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
@@ -26,6 +24,8 @@ set nu
 
  "for taglist
  nmap <F8> :Tagbar<CR>
+" NERDTree
+ nmap <C-T> : NERDTreeToggle<CR>
 
  "for indent guide
  let g:indentguides_spacechar = '┆'
@@ -45,7 +45,10 @@ set nu
 "for blueyed/vim-diminactive
  let g:diminactive_enable_focus = 1
 
- syntax enable
+ if has("syntax")
+	 syntax on
+ endif
+
  filetype indent on
  highlight Comment term=bold cterm=bold ctermfg=4
 
