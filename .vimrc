@@ -4,6 +4,7 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'nanotech/jellybeans.vim'
+Plugin 'EdenEast/nightfox.nvim'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdtree'
 Plugin 'nathanaelkane/vim-indent-guides'
@@ -19,8 +20,10 @@ call vundle#end()
 set t_Co=256
 set nu
 
+
 " for jellybeans
- colorscheme jellybeans
+colorscheme jellybeans
+colo onehalflight
 
  "for taglist
  nmap <F8> :Tagbar<CR>
@@ -36,7 +39,7 @@ set nu
 
  "for vim-airline
  let g:airline#extensions#tabline#enabled = 1 " turn on buffer list
- let g:airline_theme='hybrid'
+ let g:airline_theme='simple'
  set laststatus=2 " turn on bottom bar
  let mapleader = ","
  nnoremap <leader>q :bp<CR>
